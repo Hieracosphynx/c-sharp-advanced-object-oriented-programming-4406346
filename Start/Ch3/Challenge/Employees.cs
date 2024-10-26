@@ -2,9 +2,18 @@
 // Solution to the Employee Class challenge
 
 public class Employee {
-    public Employee() {}
+    private static int _employeeCount = 0;
+    private static int IDStart;
+    static Employee(){
+        IDStart = 1000;
+    }
+    public Employee() {
+        Employee._employeeCount++;
+        ID = Employee.IDStart++;
+    }
 
-    public required int ID {get; init;}
+    public int ID {get; set;}
+    public static int EmployeeCount { get => _employeeCount; }
     public required string Department {get; set;}
     public required string FullName {get; set;}
 
