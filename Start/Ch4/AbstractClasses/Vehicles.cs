@@ -2,7 +2,7 @@
 // Defining abstract classes
 
 // Declare an abstract base class to prevent direct instantiation
-public class Vehicle
+public abstract class Vehicle
 {
     public Vehicle() {}
 
@@ -16,9 +16,7 @@ public class Vehicle
         init;
     }
 
-    public virtual void SoundHorn() {
-        Console.WriteLine("Add horn sound here");
-    }
+    public abstract void SoundHorn();
 
     public override string ToString() {
         return $"{GetType()}: {Make} {Model}";
